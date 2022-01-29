@@ -2,7 +2,7 @@ import { FETCH_USER_FAILUER, FETCH_USER_SUCCESS, FETCH_USER_REQUEST } from "./us
 
 const initailUser = {
     loading: false,
-    users: ['Gm shuvo'],
+    users: [],
     error: ''
 }
 
@@ -12,6 +12,7 @@ const userReducer = (state = initailUser, action) => {
       return {
         ...state,
         loading: true,
+        users: []
       }
     case FETCH_USER_SUCCESS:
       return {
